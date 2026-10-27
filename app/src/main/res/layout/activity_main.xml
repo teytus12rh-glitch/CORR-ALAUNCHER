@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#09121E"
+    android:padding="20dp">
+
+    <!-- Topo Esquerdo: Marca -->
+    <LinearLayout
+        android:id="@+id/headerBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎬🎮"
+            android:textSize="28sp"
+            android:layout_marginEnd="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leandro Corrêa"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="L A U N C H E R"
+                android:textColor="#00E5FF"
+                android:textSize="10sp"
+                android:letterSpacing="0.2" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Topo Direito: Data e Hora -->
+    <LinearLayout
+        android:id="@+id/headerClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txtClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="19:42"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="32sp" />
+
+            <View
+                android:layout_width="1.5dp"
+                android:layout_height="26dp"
+                android:background="#44FFFFFF"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtDayWeek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sábado"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtDateFull"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="27 de Setembro de 2026"
+                    android:textColor="#B0BEC5"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 📶 ⚙️"
+                android:textSize="16sp"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtDateExtra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ano: 2026 | Mês: 09 | Dia: 27"
+            android:textColor="#80B0BEC5"
+            android:textSize="10sp"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <!-- Menu Lateral Esquerdo -->
+    <LinearLayout
+        android:id="@+id/sidebarMenu"
+        android:layout_width="130dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/headerBrand"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/menuHome"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="🏠 Início"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/card_tv_focus"
+            android:focusable="true"
+            android:clickable="true"
+            android:soundEffectsEnabled="true"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/menuMovies"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="🎬 Filmes"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:textColor="#B0BEC5"
+            android:background="@drawable/card_tv_focus"
+            android:focusable="true"
+            android:clickable="true"
+            android:soundEffectsEnabled="true"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/menuSeries"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="📺 Séries"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:textColor="#B0BEC5"
+            android:background="@drawable/card_tv_focus"
+            android:focusable="true"
+            android:clickable="true"
+            android:soundEffectsEnabled="true"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/menuApps"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="▦ Aplicativos"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:textColor="#B0BEC5"
+            android:background="@drawable/card_tv_focus"
+            android:focusable="true"
+            android:clickable="true"
+            android:soundEffectsEnabled="true"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/menuSettings"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="⚙ Configurações"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:textColor="#B0BEC5"
+            android:background="@drawable/card_tv_focus"
+            android:focusable="true"
+            android:clickable="true"
+            android:soundEffectsEnabled="true"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- Conteúdo Central -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/headerClock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sidebarMenu"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Painel Meteorologia -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:orientation="horizontal"
+            android:background="@drawable/card_tv_focus"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⛅"
+                android:textSize="34sp"
+                android:layout_marginEnd="8dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22°C"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parcialmente nublado"
+                    android:textColor="#E0E0E0"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 Jacarezinho - PR"
+                    android:textColor="#00E5FF"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:background="#22FFFFFF"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hoje\n☀️\n23°/16°"
+                    android:gravity="center"
+                    android:textColor="#CFD8DC"
+                    android:textSize="9sp"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dom\n☀️\n25°/17°"
+                    android:gravity="center"
+                    android:textColor="#CFD8DC"
+                    android:textSize="9sp"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seg\n⛅\n24°/18°"
+                    android:gravity="center"
+                    android:textColor="#CFD8DC"
+                    android:textSize="9sp"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ter\n☀️\n26°/19°"
+                    android:gravity="center"
+                    android:textColor="#CFD8DC"
+                    android:textSize="9sp"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Qua\n🌧️\n27°/20°"
+                    android:gravity="center"
+                    android:textColor="#CFD8DC"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:background="#22FFFFFF"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💧 Umidade 72%"
+                    android:textColor="#B0BEC5"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🍃 Vento 12 km/h"
+                    android:textColor="#B0BEC5"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="☀️ UV 5"
+                    android:textColor="#B0BEC5"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⏲️ Pressão 1012 hPa"
+                    android:textColor="#B0BEC5"
+                    android:textSize="9sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Barra de Favoritos -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerFavorites"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:orientation="horizontal"
+            android:clipToPadding="false"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Entradas HDMI -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:id="@+id/btnHdmi1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="38dp"
+                android:text="▭ HDMI 1"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:background="@drawable/card_tv_focus"
+                android:focusable="true"
+                android:soundEffectsEnabled="true"
+                android:layout_marginEnd="10dp" />
+
+            <Button
+                android:id="@+id/btnHdmi2"
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="38dp"
+                android:text="▭ HDMI 2 (eARC)"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:background="@drawable/card_tv_focus"
+                android:focusable="true"
+                android:soundEffectsEnabled="true"
+                android:layout_marginEnd="10dp" />
+
+            <Button
+                android:id="@+id/btnHdmi3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="38dp"
+                android:text="▭ HDMI 3"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:background="@drawable/card_tv_focus"
+                android:focusable="true"
+                android:soundEffectsEnabled="true" />
+        </LinearLayout>
+
+        <!-- Seção Boa Diversão -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Boa diversão!"
+            android:textColor="#80FFFFFF"
+            android:textSize="11sp"
+            android:layout_marginBottom="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="▶ THE LAST OF US"
+                android:gravity="bottom|center_horizontal"
+                android:padding="6dp"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:background="@drawable/card_tv_focus"
+                android:focusable="true"
+                android:soundEffectsEnabled="true"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="▶ WICKED"
+                android:gravity="bottom|center_horizontal"
+                android:padding="6dp"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:background="@drawable/card_tv_focus"
+                android:focusable="true"
+                android:soundEffectsEnabled="true"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="▶ DEADPOOL 3"
+                android:gravity="bottom|center_horizontal"
+                android:padding="6dp"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:background="@drawable/card_tv_focus"
+                android:focusable="true"
+                android:soundEffectsEnabled="true"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="▶ GLADIADOR II"
+                android:gravity="bottom|center_horizontal"
+                android:padding="6dp"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:background="@drawable/card_tv_focus"
+                android:focusable="true"
+                android:soundEffectsEnabled="true"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="▶ STRANGER THINGS"
+                android:gravity="bottom|center_horizontal"
+                android:padding="6dp"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:background="@drawable/card_tv_focus"
+                android:focusable="true"
+                android:soundEffectsEnabled="true"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="▶ DUNA 2"
+                android:gravity="bottom|center_horizontal"
+                android:padding="6dp"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:background="@drawable/card_tv_focus"
+                android:focusable="true"
+                android:soundEffectsEnabled="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
