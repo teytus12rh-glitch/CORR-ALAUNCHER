@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="105dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginEnd="12dp"
+    android:background="@drawable/card_tv_focus"
+    android:focusable="true"
+    android:clickable="true"
+    android:soundEffectsEnabled="true"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imgAppIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="Ícone do Aplicativo" />
+
+    <TextView
+        android:id="@+id/txtAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="13sp" />
+</LinearLayout>
